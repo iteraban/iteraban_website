@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Cursos y Talleres | Iteraban</title>
+    <meta name="description" content="Aprende a aplicar Design Thinking y metodologías ágiles para resolver problemas sociales de manera creativa y efectiva en nuestros talleres prácticos.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Cursos y Talleres | Iteraban">
+    <meta property="og:description" content="Talleres prácticos y colaborativos diseñados para sensibilizar y empoderar a equipos y comunidades con herramientas de innovación.">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a1a1a/ffffff?text=Talleres">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tu-dominio.com/cursos_talleres.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/FF6A00/ffffff?text=I">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN for high-quality icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
+        .accent-color { color: #FF6A00; }
+        .bg-accent-color { background-color: #FF6A00; }
+        .section-fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .section-fade-in.visible { opacity: 1; transform: translateY(0); }
+        .header-scrolled { background-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HEADER CORREGIDO Y SIMPLIFICADO -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="iteraban_website.html#inicio" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/FF6A00/ffffff?text=I" alt="Logo de Iteraban" class="h-8 w-8 rounded-full">
+                <span class="text-xl font-bold text-gray-800">Iteraban</span>
+            </a>
+            
+            <!-- Menú de Navegación Simplificado para Subpáginas -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="iteraban_website.html#inicio" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_home">Inicio</a>
+                <a href="iteraban_website.html#sobre" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_about">Sobre Iteraban</a>
+                <a href="iteraban_website.html#servicios" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_services">Servicios</a>
+                <a href="iteraban_website.html#cursos" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_courses">Cursos</a>
+                <a href="iteraban_website.html#contacto" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_contact">Contacto</a>
+            </nav>
+
+            <!-- Selector de Idioma -->
+            <div>
+                <select id="lang-switcher" class="bg-transparent text-sm text-gray-500 font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6A00]">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. ENCABEZADO (HERO SECTION) -->
+        <section class="bg-gray-50 pt-32 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight mb-4" data-lang-key="hero_title">Aprender Haciendo.</h1>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-8" data-lang-key="hero_subtitle">Nuestra filosofía no es enseñar teoría, es facilitar la práctica. Ofrecemos talleres intensivos y colaborativos donde aplicas metodologías de innovación a desafíos reales.</p>
+                <a href="#taller-destacado" class="inline-block bg-[#FF6A00] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transform hover:scale-105 transition-all duration-300 shadow-lg" data-lang-key="hero_cta">
+                    Ver Taller Destacado
+                </a>
+            </div>
+        </section>
+        
+        <!-- 2. SECCIÓN DE FILOSOFÍA -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4" data-lang-key="philosophy_title">¿Por qué un Taller y no un Curso?</h2>
+                    <p class="text-gray-600" data-lang-key="philosophy_p1">Un curso transfiere conocimiento; un taller desarrolla habilidades. Creemos que el verdadero aprendizaje ocurre cuando aplicas un concepto. Por eso, nuestros talleres están diseñados para que salgas con un resultado tangible y una "victoria rápida" que te dé la confianza y las herramientas para continuar innovando por tu cuenta.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format=fit=crop" alt="Personas colaborando en un taller" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TALLER DESTACADO -->
+        <section id="taller-destacado" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="featured_title">Taller Destacado</h2>
+                </div>
+                <div class="bg-white p-8 md:p-12 rounded-lg shadow-2xl max-w-5xl mx-auto">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="md:col-span-2">
+                            <h3 class="text-2xl md:text-3xl font-bold text-[#FF6A00] mb-4" data-lang-key="workshop_title">Impacto Ágil: Lanza y Valida tu Emprendimiento Social</h3>
+                            <p class="text-gray-600 mb-6" data-lang-key="workshop_desc">Aprende y aplica el ciclo de "Crear-Medir-Aprender" para transformar una idea de impacto social en un modelo validado, listo para ser probado en el mundo real. Sal de este taller con tu primer plan de validación y un prototipo de bajo costo diseñado.</p>
+                            
+                            <h4 class="font-bold text-lg mb-2" data-lang-key="modules_title">Módulos del Taller:</h4>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li data-lang-key="module1">Fundamentos del Impacto Ágil</li>
+                                <li data-lang-key="module2">Conectando con la Comunidad (Descubrimiento de Clientes)</li>
+                                <li data-lang-key="module3">Prototipando el Cambio (MVP y Experimentación)</li>
+                                <li data-lang-key="module4">Medir, Aprender y Decidir (Próximos Pasos)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-lg mb-3" data-lang-key="ideal_for_title">Ideal para:</h4>
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li class="flex items-start"><span class="text-[#FF6A00] mr-2">&#10003;</span> <span data-lang-key="ideal1">Emprendedores sociales en etapa inicial.</span></li>
+                                <li class="flex items-start"><span class="text-[#FF6A00] mr-2">&#10003;</span> <span data-lang-key="ideal2">Miembros de ONGs que lideran nuevos proyectos.</span></li>
+                                <li class="flex items-start"><span class="text-[#FF6A00] mr-2">&#10003;</span> <span data-lang-key="ideal3">Profesionales que buscan aplicar innovación en su trabajo.</span></li>
+                                <li class="flex items-start"><span class="text-[#FF6A00] mr-2">&#10003;</span> <span data-lang-key="ideal4">Equipos que necesitan alinearse y validar una idea rápidamente.</span></li>
+                            </ul>
+                             <a href="iteraban_website.html#contacto" class="mt-6 w-full text-center inline-block bg-[#FF6A00] text-white font-bold py-3 px-5 rounded-lg hover:bg-[#E65C00] transition-colors" data-lang-key="request_info_btn">
+                                 Solicitar Información
+                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN DE OTROS TALLERES (ACTUALIZADA) -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="upcoming_title">Próximos Talleres</h2>
+                    <p class="text-lg text-gray-500 mt-2" data-lang-key="upcoming_subtitle">Estamos preparando nuevas experiencias de aprendizaje práctico.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800" data-lang-key="upcoming1_title">Fundamentos del Diseño Centrado en las Personas</h3>
+                        <p class="text-gray-600" data-lang-key="upcoming1_desc">Aprende los conceptos esenciales del diseño centrado en las personas. Este taller te guiará paso a paso para comprender cómo observar, escuchar y co-crear soluciones que realmente respondan a las necesidades de las comunidades.</p>
+                        <p class="mt-4 font-semibold text-gray-400" data-lang-key="coming_soon">Próximamente</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800" data-lang-key="upcoming2_title">Prototipado y Pruebas en Diseño Centrado en las Personas</h3>
+                        <p class="text-gray-600" data-lang-key="upcoming2_desc">Descubre cómo transformar ideas en prototipos tangibles y ponerlos a prueba con usuarios reales. Este taller práctico te permitirá validar, mejorar y fortalecer tus soluciones antes de lanzarlas al mundo.</p>
+                        <p class="mt-4 font-semibold text-gray-400" data-lang-key="coming_soon">Próximamente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. LLAMADA A LA ACCIÓN FINAL -->
+        <section class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-key="cta_title">¿Necesitas un taller a la medida?</h2>
+                <p class="text-lg text-gray-300 mb-8" data-lang-key="cta_p1">Podemos diseñar una experiencia de aprendizaje personalizada para las necesidades específicas de tu equipo u organización. Desde una introducción de 2 horas hasta un bootcamp intensivo de 3 días.</p>
+                <a href="iteraban_website.html#contacto" class="inline-block bg-[#FF6A00] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transform hover:scale-105 transition-all duration-300 shadow-lg" data-lang-key="cta_button">
+                    Contáctanos para Cotizar
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER (Consistente) -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; <span id="copyright-year"></span> Iteraban. <span data-lang-key="footer_rights">Todos los derechos reservados.</span></p>
+             <div class="flex space-x-6">
+                <!-- Social Icons Updated with Font Awesome -->
+                <a href="https://www.instagram.com/iteraban/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.tiktok.com/@iteraban2?lang=en" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/iteraban-hn-713673382/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- GESTIÓN MULTI-IDIOMA ---
+            const translations = {
+                en: {
+                    nav_home: "Home",
+                    nav_about: "About",
+                    nav_services: "Services",
+                    nav_courses: "Courses",
+                    nav_contact: "Contact",
+                    hero_title: "Learning by Doing.",
+                    hero_subtitle: "Our philosophy is not to teach theory, but to facilitate practice. We offer intensive, collaborative workshops where you apply innovation methodologies to real challenges.",
+                    hero_cta: "View Featured Workshop",
+                    philosophy_title: "Why a Workshop and not a Course?",
+                    philosophy_p1: "A course transfers knowledge; a workshop develops skills. We believe true learning happens when you apply a concept. That's why our workshops are designed for you to leave with a tangible result and a 'quick win' that gives you the confidence and tools to continue innovating on your own.",
+                    featured_title: "Featured Workshop",
+                    workshop_title: "Agile Impact: Launch and Validate Your Social Venture",
+                    workshop_desc: "Learn and apply the 'Build-Measure-Learn' cycle to transform a social impact idea into a validated model, ready to be tested in the real world. Leave this workshop with your first validation plan and a designed low-cost prototype.",
+                    modules_title: "Workshop Modules:",
+                    module1: "Foundations of Agile Impact",
+                    module2: "Connecting with the Community (Customer Discovery)",
+                    module3: "Prototyping Change (MVP & Experimentation)",
+                    module4: "Measure, Learn, and Decide (Next Steps)",
+                    ideal_for_title: "Ideal for:",
+                    ideal1: "Early-stage social entrepreneurs.",
+                    ideal2: "NGO members leading new projects.",
+                    ideal3: "Professionals looking to apply innovation in their work.",
+                    ideal4: "Teams needing to align and validate an idea quickly.",
+                    request_info_btn: "Request Information",
+                    upcoming_title: "Upcoming Workshops",
+                    upcoming_subtitle: "We are preparing new practical learning experiences.",
+                    upcoming1_title: "Fundamentals of Human-Centered Design",
+                    upcoming1_desc: "Learn the essential concepts of human-centered design. This workshop will guide you step-by-step to understand how to observe, listen, and co-create solutions that truly respond to community needs.",
+                    upcoming2_title: "Prototyping and Testing in Human-Centered Design",
+                    upcoming2_desc: "Discover how to transform ideas into tangible prototypes and test them with real users. This hands-on workshop will allow you to validate, improve, and strengthen your solutions before launching them to the world.",
+                    coming_soon: "Coming Soon",
+                    cta_title: "Need a custom workshop?",
+                    cta_p1: "We can design a personalized learning experience for the specific needs of your team or organization. From a 2-hour introduction to an intensive 3-day bootcamp.",
+                    cta_button: "Contact Us for a Quote",
+                    footer_rights: "All rights reserved."
+                },
+                es: {
+                    nav_home: "Inicio",
+                    nav_about: "Sobre Iteraban",
+                    nav_services: "Servicios",
+                    nav_courses: "Cursos",
+                    nav_contact: "Contacto",
+                    hero_title: "Aprender Haciendo.",
+                    hero_subtitle: "Nuestra filosofía no es enseñar teoría, es facilitar la práctica. Ofrecemos talleres intensivos y colaborativos donde aplicas metodologías de innovación a desafíos reales.",
+                    hero_cta: "Ver Taller Destacado",
+                    philosophy_title: "¿Por qué un Taller y no un Curso?",
+                    philosophy_p1: "Un curso transfiere conocimiento; un taller desarrolla habilidades. Creemos que el verdadero aprendizaje ocurre cuando aplicas un concepto. Por eso, nuestros talleres están diseñados para que salgas con un resultado tangible y una \"victoria rápida\" que te dé la confianza y las herramientas para continuar innovando por tu cuenta.",
+                    featured_title: "Taller Destacado",
+                    workshop_title: "Impacto Ágil: Lanza y Valida tu Emprendimiento Social",
+                    workshop_desc: "Aprende y aplica el ciclo de \"Crear-Medir-Aprender\" para transformar una idea de impacto social en un modelo validado, listo para ser probado en el mundo real. Sal de este taller con tu primer plan de validación y un prototipo de bajo costo diseñado.",
+                    modules_title: "Módulos del Taller:",
+                    module1: "Fundamentos del Impacto Ágil",
+                    module2: "Conectando con la Comunidad (Descubrimiento de Clientes)",
+                    module3: "Prototipando el Cambio (MVP y Experimentación)",
+                    module4: "Medir, Aprender y Decidir (Próximos Pasos)",
+                    ideal_for_title: "Ideal para:",
+                    ideal1: "Emprendedores sociales en etapa inicial.",
+                    ideal2: "Miembros de ONGs que lideran nuevos proyectos.",
+                    ideal3: "Profesionales que buscan aplicar innovación en su trabajo.",
+                    ideal4: "Equipos que necesitan alinearse y validar una idea rápidamente.",
+                    request_info_btn: "Solicitar Información",
+                    upcoming_title: "Próximos Talleres",
+                    upcoming_subtitle: "Estamos preparando nuevas experiencias de aprendizaje práctico.",
+                    upcoming1_title: "Fundamentos del Diseño Centrado en las Personas",
+                    upcoming1_desc: "Aprende los conceptos esenciales del diseño centrado en las personas. Este taller te guiará paso a paso para comprender cómo observar, escuchar y co-crear soluciones que realmente respondan a las necesidades de las comunidades.",
+                    upcoming2_title: "Prototipado y Pruebas en Diseño Centrado en las Personas",
+                    upcoming2_desc: "Descubre cómo transformar ideas en prototipos tangibles y ponerlos a prueba con usuarios reales. Este taller práctico te permitirá validar, mejorar y fortalecer tus soluciones antes de lanzarlas al mundo.",
+                    coming_soon: "Próximamente",
+                    cta_title: "¿Necesitas un taller a la medida?",
+                    cta_p1: "Podemos diseñar una experiencia de aprendizaje personalizada para las necesidades específicas de tu equipo u organización. Desde una introducción de 2 horas hasta un bootcamp intensivo de 3 días.",
+                    cta_button: "Contáctanos para Cotizar",
+                    footer_rights: "Todos los derechos reservados."
+                }
+            };
+
+            const langSwitcher = document.getElementById('lang-switcher');
+            
+            function switchLanguage(lang) {
+                document.querySelectorAll('[data-lang-key]').forEach(el => {
+                    const key = el.getAttribute('data-lang-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+                localStorage.setItem('language', lang);
+            }
+            
+            langSwitcher.addEventListener('change', (e) => switchLanguage(e.target.value));
+
+            const savedLang = localStorage.getItem('language') || 'es';
+            langSwitcher.value = savedLang;
+            switchLanguage(savedLang);
+
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.section-fade-in').forEach(section => observer.observe(section));
+
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

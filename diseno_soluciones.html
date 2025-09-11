@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Diseño de Soluciones | Iteraban</title>
+    <meta name="description" content="Transformamos insights en soluciones tangibles. A través de talleres de co-creación y sprints de diseño, prototipamos y validamos ideas de forma ágil y centrada en las personas.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Diseño de Soluciones | Iteraban">
+    <meta property="og:description" content="De la idea al prototipo validado. Co-creamos soluciones, servicios y productos que tu comunidad realmente necesita y usará.">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a1a1a/ffffff?text=Diseño">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tu-dominio.com/diseno_soluciones.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/FF6A00/ffffff?text=I">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN for high-quality icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
+        .accent-color { color: #FF6A00; }
+        .bg-accent-color { background-color: #FF6A00; }
+        .section-fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .section-fade-in.visible { opacity: 1; transform: translateY(0); }
+        .header-scrolled { background-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HEADER CORREGIDO Y SIMPLIFICADO -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="iteraban_website.html#inicio" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/FF6A00/ffffff?text=I" alt="Logo de Iteraban" class="h-8 w-8 rounded-full">
+                <span class="text-xl font-bold text-gray-800">Iteraban</span>
+            </a>
+            
+            <!-- Menú de Navegación Simplificado para Subpáginas -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="iteraban_website.html#inicio" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_home">Inicio</a>
+                <a href="iteraban_website.html#sobre" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_about">Sobre Iteraban</a>
+                <a href="iteraban_website.html#servicios" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_services">Servicios</a>
+                <a href="iteraban_website.html#cursos" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_courses">Cursos</a>
+                <a href="iteraban_website.html#contacto" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_contact">Contacto</a>
+            </nav>
+
+            <!-- Selector de Idioma -->
+            <div>
+                <select id="lang-switcher" class="bg-transparent text-sm text-gray-500 font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6A00]">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. ENCABEZADO (HERO SECTION) -->
+        <section class="bg-gray-50 pt-32 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight mb-4" data-lang-key="hero_title">De la Evidencia a la Acción.</h1>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-8" data-lang-key="hero_subtitle">Ya sabes cuál es el problema real. Ahora, construyamos juntos la solución correcta. Facilitamos sprints de diseño ágiles para transformar insights en prototipos validados por usuarios reales.</p>
+                <a href="iteraban_website.html#contacto" class="inline-block bg-[#FF6A00] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transform hover:scale-105 transition-all duration-300 shadow-lg" data-lang-key="hero_cta">
+                    Agendar Llamada de Exploración Gratuita
+                </a>
+            </div>
+        </section>
+        
+        <!-- 2. SECCIÓN DE PROBLEMA -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4" data-lang-key="problem_title">El salto al vacío de la creación.</h2>
+                    <p class="text-gray-600" data-lang-key="problem_p1">Tienes una comprensión clara de las necesidades de tu comunidad, pero ahora viene el gran desafío: ¿cómo traducir esos hallazgos en una solución tangible, efectiva y que la gente quiera usar? Pasar meses desarrollando un producto o servicio basándose en suposiciones internas es un riesgo enorme que consume tiempo y recursos valiosos. ¿Y si construyes algo que nadie quiere?</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2138&auto=format=fit=crop" alt="Equipo colaborando en una pizarra" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN DE SOLUCIÓN -->
+        <section class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl font-bold mb-4" data-lang-key="solution_title">La Solución: Prototipar, Probar y Aprender en Días, no Meses.</h2>
+                <p class="text-lg text-gray-300" data-lang-key="solution_p1">Nuestro servicio de Diseño de Soluciones utiliza la metodología de Sprint de Diseño para comprimir meses de trabajo en una semana intensiva y colaborativa. En lugar de adivinar, te guiamos en un proceso probado para idear, prototipar y probar tu solución con usuarios reales, dándote la certeza de que estás construyendo algo valioso antes de invertir en su desarrollo a gran escala.</p>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN DE BENEFICIOS / ENTREGABLES -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="benefits_title">¿Qué obtienes con un Sprint de Diseño?</h2>
+                    <p class="text-lg text-gray-500 mt-2" data-lang-key="benefits_subtitle">Velocidad, certeza y una solución validada.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="benefit1_title">Prototipo Interactivo y Validado</h3>
+                        <p class="text-gray-600" data-lang-key="benefit1_desc">Al final de la semana, tendrás un prototipo realista que ha sido probado por usuarios reales, dándote feedback claro sobre qué funciona y qué no.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="benefit2_title">Ahorro de Tiempo y Dinero</h3>
+                        <p class="text-gray-600" data-lang-key="benefit2_desc">Evita meses de desarrollo y miles de dólares invertidos en una idea equivocada. Obtén aprendizaje validado en una fracción del tiempo y costo.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="benefit3_title">Hoja de Ruta Clara para el Desarrollo</h3>
+                        <p class="text-gray-600" data-lang-key="benefit3_desc">Te entregamos un "Blueprint" de la solución y un plan de acción recomendado para que tu equipo de desarrollo sepa exactamente qué construir a continuación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECCIÓN DEL PROCESO -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="process_title">Nuestro Proceso de Sprint</h2>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">1</div><div><h3 class="text-xl font-bold" data-lang-key="process1_title">Entender y Mapear</h3><p class="text-gray-600" data-lang-key="process1_desc">Alineamos al equipo con los hallazgos del descubrimiento, definimos el objetivo y mapeamos el desafío para encontrar un foco claro.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">2</div><div><h3 class="text-xl font-bold" data-lang-key="process2_title">Idear y Esbozar</h3><p class="text-gray-600" data-lang-key="process2_desc">Generamos una amplia gama de soluciones a través de técnicas de ideación individuales, fomentando la creatividad sin limitaciones.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">3</div><div><h3 class="text-xl font-bold" data-lang-key="process3_title">Decidir y Guion Gráfico</h3><p class="text-gray-600" data-lang-key="process3_desc">El equipo critica y vota por las mejores soluciones, y el "Decisor" toma la decisión final. Luego creamos un plan detallado para el prototipo.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">4</div><div><h3 class="text-xl font-bold" data-lang-key="process4_title">Prototipar y Probar</h3><p class="text-gray-600" data-lang-key="process4_desc">Construimos un prototipo de alta fidelidad y lo ponemos a prueba con usuarios reales para obtener feedback honesto y accionable.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SECCIÓN DE CREDIBILIDAD -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-lang-key="credibility_title">Rigor Analítico, Corazón Humano.</h2>
+                 <p class="text-gray-600 mb-8" data-lang-key="credibility_p1">Mi enfoque es único. Como Ingeniero Civil con un Máster en Administración de Proyectos, aporto una disciplina de pensamiento estructurado, gestión de riesgos y planificación rigurosa a cada desafío. Combino esta base analítica con metodologías de innovación ágiles y centradas en el ser humano para ofrecer soluciones que son tanto creativas como ejecutables. Es la fusión de un plano bien hecho con una historia bien contada.</p>
+                 <div class="bg-gray-100 p-8 rounded-lg italic border-l-4 border-[#FF6A00]">
+                    <p class="text-gray-700" data-lang-key="testimonial_p1">"El Sprint de Diseño fue transformador. En una semana logramos más de lo que habíamos logrado en seis meses de reuniones. Ahora tenemos un prototipo que nuestro equipo ama y que los usuarios entienden."</p>
+                    <p class="mt-4 font-semibold text-gray-800" data-lang-key="testimonial_author">— Gerente de Innovación, Empresa Social</p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- 7. SECCIÓN "PARA QUIÉN ES ESTO" -->
+        <section class="py-20 bg-gray-50">
+             <div class="container mx-auto px-6 max-w-2xl">
+                <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="who_title">Este servicio es ideal si tu equipo necesita:</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who1">Tomar decisiones rápidas y basadas en evidencia, no en opiniones.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who2">Alinear a stakeholders de diferentes áreas en una visión única y tangible.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who3">Validar una idea de alto riesgo antes de comprometer un gran presupuesto.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who4">Desbloquear la creatividad y fomentar una cultura de innovación y colaboración.</span></li>
+                </ul>
+             </div>
+        </section>
+
+        <!-- 8. LLAMADA A LA ACCIÓN FINAL -->
+        <section class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-key="cta_title">¿Listo/a para dar vida a tu próxima gran idea?</h2>
+                <p class="text-lg text-gray-300 mb-8" data-lang-key="cta_p1">Dejemos de hablar y empecemos a construir. Agenda una llamada y exploremos cómo un Sprint de Diseño puede acelerar tu impacto y darte la claridad que necesitas para avanzar con confianza.</p>
+                <a href="iteraban_website.html#contacto" class="inline-block bg-[#FF6A00] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transform hover:scale-105 transition-all duration-300 shadow-lg" data-lang-key="cta_button">
+                    Agendar Llamada de Exploración Gratuita
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER (Consistente) -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; <span id="copyright-year"></span> Iteraban. <span data-lang-key="footer_rights">Todos los derechos reservados.</span></p>
+             <div class="flex space-x-6">
+                <!-- Social Icons Updated with Font Awesome -->
+                <a href="https://www.instagram.com/iteraban/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.tiktok.com/@iteraban2?lang=en" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/iteraban-hn-713673382/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- GESTIÓN MULTI-IDIOMA ---
+            const translations = {
+                en: {
+                    nav_home: "Home",
+                    nav_about: "About",
+                    nav_services: "Services",
+                    nav_courses: "Courses",
+                    nav_contact: "Contact",
+                    hero_title: "From Evidence to Action.",
+                    hero_subtitle: "You know the real problem. Now, let's build the right solution together. We facilitate agile design sprints to turn insights into prototypes validated by real users.",
+                    hero_cta: "Schedule Free Exploration Call",
+                    problem_title: "The leap of faith in creation.",
+                    problem_p1: "You have a clear understanding of your community's needs, but now comes the big challenge: how to translate those findings into a tangible, effective solution that people want to use? Spending months developing a product based on internal assumptions is a huge risk that consumes valuable time and resources. What if you build something nobody wants?",
+                    solution_title: "The Solution: Prototype, Test, and Learn in Days, Not Months.",
+                    solution_p1: "Our Solution Design service uses the Design Sprint methodology to compress months of work into an intensive, collaborative week. Instead of guessing, we guide you through a proven process to ideate, prototype, and test your solution with real users, giving you the certainty that you're building something valuable before investing in its full-scale development.",
+                    benefits_title: "What do you get with a Design Sprint?",
+                    benefits_subtitle: "Speed, certainty, and a validated solution.",
+                    benefit1_title: "Interactive and Validated Prototype",
+                    benefit1_desc: "By the end of the week, you will have a realistic prototype that has been tested by real users, giving you clear feedback on what works and what doesn't.",
+                    benefit2_title: "Save Time and Money",
+                    benefit2_desc: "Avoid months of development and thousands of dollars invested in the wrong idea. Get validated learning in a fraction of the time and cost.",
+                    benefit3_title: "Clear Development Roadmap",
+                    benefit3_desc: "We provide a solution 'Blueprint' and a recommended action plan so your development team knows exactly what to build next.",
+                    process_title: "Our Sprint Process",
+                    process1_title: "Understand and Map",
+                    process1_desc: "We align the team with the discovery findings, define the goal, and map the challenge to find a clear focus.",
+                    process2_title: "Ideate and Sketch",
+                    process2_desc: "We generate a wide range of solutions through individual ideation techniques, fostering creativity without limitations.",
+                    process3_title: "Decide and Storyboard",
+                    process3_desc: "The team critiques and votes on the best solutions, and the 'Decider' makes the final call. We then create a detailed plan for the prototype.",
+                    process4_title: "Prototype and Test",
+                    process4_desc: "We build a high-fidelity prototype and test it with real users to get honest and actionable feedback.",
+                    credibility_title: "Analytical Rigor, Human Heart.",
+                    credibility_p1: "My approach is unique. As a Civil Engineer with a Master's in Project Management, I bring structured thinking, risk management, and rigorous planning to every challenge. I combine this analytical foundation with agile, human-centered innovation methodologies to deliver solutions that are both creative and executable. It's the fusion of a well-made blueprint with a well-told story.",
+                    testimonial_p1: '"The Design Sprint was transformative. In one week, we accomplished more than we had in six months of meetings. We now have a prototype our team loves and users understand."',
+                    testimonial_author: "— Innovation Manager, Social Enterprise",
+                    who_title: "This service is ideal if your team needs to:",
+                    who1: "Make fast, evidence-based decisions, not opinion-based ones.",
+                    who2: "Align stakeholders from different areas around a single, tangible vision.",
+                    who3: "Validate a high-risk idea before committing a large budget.",
+                    who4: "Unlock creativity and foster a culture of innovation and collaboration.",
+                    cta_title: "Ready to bring your next big idea to life?",
+                    cta_p1: "Let's stop talking and start building. Schedule a call and let's explore how a Design Sprint can accelerate your impact and give you the clarity you need to move forward with confidence.",
+                    cta_button: "Schedule Free Exploration Call",
+                    footer_rights: "All rights reserved."
+                },
+                es: { // Textos por defecto en el HTML
+                    nav_home: "Inicio",
+                    nav_about: "Sobre Iteraban",
+                    nav_services: "Servicios",
+                    nav_courses: "Cursos",
+                    nav_contact: "Contacto",
+                    hero_title: "De la Evidencia a la Acción.",
+                    hero_subtitle: "Ya sabes cuál es el problema real. Ahora, construyamos juntos la solución correcta. Facilitamos sprints de diseño ágiles para transformar insights en prototipos validados por usuarios reales.",
+                    hero_cta: "Agendar Llamada de Exploración Gratuita",
+                    problem_title: "El salto al vacío de la creación.",
+                    problem_p1: "Tienes una comprensión clara de las necesidades de tu comunidad, pero ahora viene el gran desafío: ¿cómo traducir esos hallazgos en una solución tangible, efectiva y que la gente quiera usar? Pasar meses desarrollando un producto o servicio basándose en suposiciones internas es un riesgo enorme que consume tiempo y recursos valiosos. ¿Y si construyes algo que nadie quiere?",
+                    solution_title: "La Solución: Prototipar, Probar y Aprender en Días, no Meses.",
+                    solution_p1: "Nuestro servicio de Diseño de Soluciones utiliza la metodología de Sprint de Diseño para comprimir meses de trabajo en una semana intensiva y colaborativa. En lugar de adivinar, te guiamos en un proceso probado para idear, prototipar y probar tu solución con usuarios reales, dándote la certeza de que estás construyendo algo valioso antes de invertir en su desarrollo a gran escala.",
+                    benefits_title: "¿Qué obtienes con un Sprint de Diseño?",
+                    benefits_subtitle: "Velocidad, certeza y una solución validada.",
+                    benefit1_title: "Prototipo Interactivo y Validado",
+                    benefit1_desc: "Al final de la semana, tendrás un prototipo realista que ha sido probado por usuarios reales, dándote feedback claro sobre qué funciona y qué no.",
+                    benefit2_title: "Ahorro de Tiempo y Dinero",
+                    benefit2_desc: "Evita meses de desarrollo y miles de dólares invertidos en una idea equivocada. Obtén aprendizaje validado en una fracción del tiempo y costo.",
+                    benefit3_title: "Hoja de Ruta Clara para el Desarrollo",
+                    benefit3_desc: "Te entregamos un \"Blueprint\" de la solución y un plan de acción recomendado para que tu equipo de desarrollo sepa exactamente qué construir a continuación.",
+                    process_title: "Nuestro Proceso de Sprint",
+                    process1_title: "Entender y Mapear",
+                    process1_desc: "Alineamos al equipo con los hallazgos del descubrimiento, definimos el objetivo y mapeamos el desafío para encontrar un foco claro.",
+                    process2_title: "Idear y Esbozar",
+                    process2_desc: "Generamos una amplia gama de soluciones a través de técnicas de ideación individuales, fomentando la creatividad sin limitaciones.",
+                    process3_title: "Decidir y Guion Gráfico",
+                    process3_desc: "El equipo critica y vota por las mejores soluciones, y el \"Decisor\" toma la decisión final. Luego creamos un plan detallado para el prototipo.",
+                    process4_title: "Prototipar y Probar",
+                    process4_desc: "Construimos un prototipo de alta fidelidad y lo ponemos a prueba con usuarios reales para obtener feedback honesto y accionable.",
+                    credibility_title: "Rigor Analítico, Corazón Humano.",
+                    credibility_p1: "Mi enfoque es único. Como Ingeniero Civil con un Máster en Administración de Proyectos, aporto una disciplina de pensamiento estructurado, gestión de riesgos y planificación rigurosa a cada desafío. Combino esta base analítica con metodologías de innovación ágiles y centradas en el ser humano para ofrecer soluciones que son tanto creativas como ejecutables. Es la fusión de un plano bien hecho con una historia bien contada.",
+                    testimonial_p1: '"El Sprint de Diseño fue transformador. En una semana logramos más de lo que habíamos logrado en seis meses de reuniones. Ahora tenemos un prototipo que nuestro equipo ama y que los usuarios entienden."',
+                    testimonial_author: "— Gerente de Innovación, Empresa Social",
+                    who_title: "Este servicio es ideal si tu equipo necesita:",
+                    who1: "Tomar decisiones rápidas y basadas en evidencia, no en opiniones.",
+                    who2: "Alinear a stakeholders de diferentes áreas en una visión única y tangible.",
+                    who3: "Validar una idea de alto riesgo antes de comprometer un gran presupuesto.",
+                    who4: "Desbloquear la creatividad y fomentar una cultura de innovación y colaboración.",
+                    cta_title: "¿Listo/a para dar vida a tu próxima gran idea?",
+                    cta_p1: "Dejemos de hablar y empecemos a construir. Agenda una llamada y exploremos cómo un Sprint de Diseño puede acelerar tu impacto y darte la claridad que necesitas para avanzar con confianza.",
+                    cta_button: "Agendar Llamada de Exploración Gratuita",
+                    footer_rights: "Todos los derechos reservados."
+                }
+            };
+            
+            const langSwitcher = document.getElementById('lang-switcher');
+            
+            function switchLanguage(lang) {
+                document.querySelectorAll('[data-lang-key]').forEach(el => {
+                    const key = el.getAttribute('data-lang-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+                localStorage.setItem('language', lang);
+            }
+            
+            langSwitcher.addEventListener('change', (e) => switchLanguage(e.target.value));
+
+            const savedLang = localStorage.getItem('language') || 'es';
+            langSwitcher.value = savedLang;
+            switchLanguage(savedLang);
+            
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.section-fade-in').forEach(section => observer.observe(section));
+
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

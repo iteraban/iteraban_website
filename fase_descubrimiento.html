@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Fase de Descubrimiento | Iteraban</title>
+    <meta name="description" content="Antes de construir, entiende. Mitiga riesgos y diseña con certeza a través de nuestro servicio de investigación y descubrimiento centrado en la comunidad.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fase de Descubrimiento | Iteraban">
+    <meta property="og:description" content="Asegura el impacto de tu proyecto social entendiendo a fondo las necesidades reales de tu comunidad.">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a1a1a/ffffff?text=Descubrimiento">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tu-dominio.com/fase_descubrimiento.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/FF6A00/ffffff?text=I">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN for high-quality icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
+        .accent-color { color: #FF6A00; }
+        .bg-accent-color { background-color: #FF6A00; }
+        .section-fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .section-fade-in.visible { opacity: 1; transform: translateY(0); }
+        .header-scrolled { background-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HEADER CORREGIDO Y SIMPLIFICADO -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="iteraban_website.html#inicio" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/FF6A00/ffffff?text=I" alt="Logo de Iteraban" class="h-8 w-8 rounded-full">
+                <span class="text-xl font-bold text-gray-800">Iteraban</span>
+            </a>
+            
+            <!-- Menú de Navegación Simplificado para Subpáginas -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="iteraban_website.html#inicio" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_home">Inicio</a>
+                <a href="iteraban_website.html#sobre" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_about">Sobre Iteraban</a>
+                <a href="iteraban_website.html#servicios" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_services">Servicios</a>
+                <a href="iteraban_website.html#cursos" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_courses">Cursos</a>
+                <a href="iteraban_website.html#contacto" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_contact">Contacto</a>
+            </nav>
+
+            <!-- Selector de Idioma -->
+            <div>
+                <select id="lang-switcher" class="bg-transparent text-sm text-gray-500 font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6A00]">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. ENCABEZADO (HERO SECTION) -->
+        <section class="bg-gray-50 pt-32 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight mb-4" data-lang-key="hero_title">Diseña el Impacto del Mañana, Hoy.</h1>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-8" data-lang-key="hero_subtitle">Ayudamos a organizaciones visionarias en Honduras a transformar sus buenas intenciones en proyectos sociales de éxito rotundo. Deja de suponer, empieza a saber.</p>
+                <a href="iteraban_website.html#contacto" class="inline-block bg-[#FF6A00] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transform hover:scale-105 transition-all duration-300 shadow-lg" data-lang-key="hero_cta">
+                    Agendar Llamada de Exploración Gratuita
+                </a>
+            </div>
+        </section>
+        
+        <!-- 2. SECCIÓN DE PROBLEMA -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4" data-lang-key="problem_title">¿Te suena familiar este desafío?</h2>
+                    <p class="text-gray-600" data-lang-key="problem_p1">Inviertes tiempo, fondos y una enorme pasión en un nuevo proyecto social. El plan parece perfecto, el equipo está motivado, pero al lanzarlo, los resultados no son los esperados. La comunidad no lo adopta como imaginabas y te quedas con la difícil pregunta: "¿En qué fallamos?". Este ciclo de incertidumbre no solo agota los recursos, sino también la moral.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format=fit=crop" alt="Equipo de trabajo discutiendo un problema" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN DE SOLUCIÓN -->
+        <section class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl font-bold mb-4" data-lang-key="solution_title">La Solución: Entender Primero, Construir Después.</h2>
+                <p class="text-lg text-gray-300" data-lang-key="solution_p1">Nadie construiría un edificio sin antes tener los planos detallados. Nuestra Fase de Descubrimiento es precisamente eso: el plano maestro de tu impacto. Antes de invertir en la "construcción" de tu programa, nos sumergimos en la realidad de tu comunidad para darte la certeza de que estás construyendo la solución correcta, sobre una base sólida de evidencia.</p>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN DE BENEFICIOS / ENTREGABLES -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="benefits_title">¿Qué obtienes con una Fase de Descubrimiento?</h2>
+                    <p class="text-lg text-gray-500 mt-2" data-lang-key="benefits_subtitle">Herramientas estratégicas que transforman tu visión en un plan accionable.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="benefit1_title">Claridad Absoluta y Mitigación de Riesgo</h3>
+                        <p class="text-gray-600" data-lang-key="benefit1_desc">Reemplaza las suposiciones con certezas, asegurando que cada lempira invertido se dirija a un impacto medible y eliminando el riesgo de proyectos fallidos.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="benefit2_title">Innovación Basada en Evidencia</h3>
+                        <p class="text-gray-600" data-lang-key="benefit2_desc">Descubre oportunidades que otros no ven. Te entregamos Arquetipos de Usuario y Mapas de Viaje que revelan áreas de innovación únicas y efectivas.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="benefit3_title">Alineación y Confianza para Stakeholders</h3>
+                        <p class="text-gray-600" data-lang-key="benefit3_desc">Obtén la aprobación de tu directorio o donantes con entregables visuales y basados en datos que cuentan una historia humana y convincente que justifica la inversión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECCIÓN DEL PROCESO -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="process_title">Nuestro Proceso Probado hacia la Claridad</h2>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">1</div><div><h3 class="text-xl font-bold" data-lang-key="process1_title">Preparación y Alineación</h3><p class="text-gray-600" data-lang-key="process1_desc">Iniciamos con una inmersión profunda en TUS objetivos. Alineamos tu visión con un plan de investigación claro y enfocado para responder a tus preguntas más críticas.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">2</div><div><h3 class="text-xl font-bold" data-lang-key="process2_title">Investigación Inmersiva</h3><p class="text-gray-600" data-lang-key="process2_desc">Salimos al terreno para hablar, escuchar y observar a la comunidad en su contexto real, capturando historias y verdades que no aparecen en las estadísticas.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">3</div><div><h3 class="text-xl font-bold" data-lang-key="process3_title">Síntesis y Revelación de Insights</h3><p class="text-gray-600" data-lang-key="process3_desc">Convertimos los datos crudos en patrones y "insights" — esas verdades no obvias que te darán una ventaja estratégica.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">4</div><div><h3 class="text-xl font-bold" data-lang-key="process4_title">Entrega de Hoja de Ruta Estratégica</h3><p class="text-gray-600" data-lang-key="process4_desc">Te entregamos una hoja de ruta visual y accionable, con oportunidades priorizadas para que sepas exactamente qué hacer a continuación.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SECCIÓN DE CREDIBILIDAD (PRUEBA SOCIAL) -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-lang-key="credibility_title">Rigor Analítico, Corazón Humano.</h2>
+                 <p class="text-gray-600 mb-8" data-lang-key="credibility_p1">Mi enfoque es único. Como Ingeniero Civil con un Máster en Administración de Proyectos, aporto una disciplina de pensamiento estructurado, gestión de riesgos y planificación rigurosa a cada desafío. Combino esta base analítica con metodologías de innovación ágiles y centradas en el ser humano para ofrecer soluciones que son tanto creativas como ejecutables. Es la fusión de un plano bien hecho con una historia bien contada.</p>
+                 <div class="bg-gray-100 p-8 rounded-lg italic border-l-4 border-[#FF6A00]">
+                    <p class="text-gray-700" data-lang-key="testimonial_p1">"El proceso de Descubrimiento nos abrió los ojos. Pasamos de tener una idea que nos apasionaba a tener la certeza de que estábamos resolviendo un problema real. El valor de esa claridad es incalculable."</p>
+                    <p class="mt-4 font-semibold text-gray-800" data-lang-key="testimonial_author">— Directora de Proyectos, ONG Local</p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- 7. SECCIÓN "PARA QUIÉN ES ESTO" -->
+        <section class="py-20 bg-gray-50">
+             <div class="container mx-auto px-6 max-w-2xl">
+                <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="who_title">Esta consultoría es ideal para organizaciones que buscan:</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who1">Maximizar el impacto real y sostenible de su inversión social.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who2">Diseñar programas y servicios que la gente ame, use y adopte.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who3">Presentar a sus donantes o directorios una justificación sólida y basada en evidencia.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who4">Innovar y diferenciarse, convirtiéndose en un referente de impacto en su sector.</span></li>
+                </ul>
+             </div>
+        </section>
+
+        <!-- 8. LLAMADA A LA ACCIÓN FINAL -->
+        <section class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-key="cta_title">¿Listo/a para construir sobre una base sólida?</h2>
+                <p class="text-lg text-gray-300 mb-8" data-lang-key="cta_p1">El éxito de tu próximo gran proyecto no debería ser una cuestión de suerte. Es una cuestión de diseño. Invierte en entendimiento primero y cosecha los frutos de un impacto duradero. Demos el primer paso juntos.</p>
+                <a href="iteraban_website.html#contacto" class="inline-block bg-[#FF6A00] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transform hover:scale-105 transition-all duration-300 shadow-lg" data-lang-key="cta_button">
+                    Agendar Llamada de Exploración Gratuita
+                </a>
+                <p class="text-sm mt-4 text-gray-400" data-lang-key="cta_p2">Una llamada de 20 minutos, sin compromiso, para diagnosticar tu desafío.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER (Consistente) -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; <span id="copyright-year"></span> Iteraban. <span data-lang-key="footer_rights">Todos los derechos reservados.</span></p>
+             <div class="flex space-x-6">
+                <!-- Social Icons Updated with Font Awesome -->
+                <a href="https://www.instagram.com/iteraban/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.tiktok.com/@iteraban2?lang=en" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/iteraban-hn-713673382/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- GESTIÓN MULTI-IDIOMA ---
+            const translations = {
+                en: {
+                    nav_home: "Home",
+                    nav_about: "About",
+                    nav_services: "Services",
+                    nav_courses: "Courses",
+                    nav_contact: "Contact",
+                    hero_title: "Design Tomorrow's Impact, Today.",
+                    hero_subtitle: "We help visionary organizations in Honduras transform good intentions into successful social projects. Stop assuming, start knowing.",
+                    hero_cta: "Schedule Free Exploration Call",
+                    problem_title: "Does this challenge sound familiar?",
+                    problem_p1: "You invest time, funds, and immense passion into a new social project. The plan seems perfect, the team is motivated, but upon launch, the results are not as expected. The community doesn't adopt it as you imagined, leaving you with the difficult question: 'Where did we go wrong?'. This cycle of uncertainty not only drains resources but also morale.",
+                    solution_title: "The Solution: Understand First, Build Later.",
+                    solution_p1: "No one would build a building without detailed blueprints. Our Discovery Phase is precisely that: the master plan for your impact. Before investing in 'building' your program, we immerse ourselves in your community's reality to give you the certainty that you are building the right solution on a solid evidence-based foundation.",
+                    benefits_title: "What do you get with a Discovery Phase?",
+                    benefits_subtitle: "Strategic tools that turn your vision into an actionable plan.",
+                    benefit1_title: "Absolute Clarity & Risk Mitigation",
+                    benefit1_desc: "Replace assumptions with certainties, ensuring every dollar invested leads to measurable impact and eliminating the risk of failed projects.",
+                    benefit2_title: "Evidence-Based Innovation",
+                    benefit2_desc: "Discover opportunities others don't see. We deliver User Personas and Journey Maps that reveal unique and effective areas for innovation.",
+                    benefit3_title: "Stakeholder Alignment & Confidence",
+                    benefit3_desc: "Gain approval from your board or donors with visual, data-driven deliverables that tell a compelling human story to justify the investment.",
+                    process_title: "Our Proven Process for Clarity",
+                    process1_title: "Preparation & Alignment",
+                    process1_desc: "We start with a deep dive into YOUR goals. We align your vision with a clear and focused research plan to answer your most critical questions.",
+                    process2_title: "Immersive Research",
+                    process2_desc: "We go into the field to talk, listen, and observe the community in their real context, capturing stories and truths not found in statistics.",
+                    process3_title: "Synthesis & Insight Revelation",
+                    process3_desc: "We turn raw data into patterns and 'insights' — those non-obvious truths that will give you a strategic advantage.",
+                    process4_title: "Strategic Roadmap Delivery",
+                    process4_desc: "We deliver a visual and actionable roadmap with prioritized opportunities, so you know exactly what to do next.",
+                    credibility_title: "Analytical Rigor, Human Heart.",
+                    credibility_p1: "My approach is unique. As a Civil Engineer with a Master's in Project Management, I bring structured thinking, risk management, and rigorous planning to every challenge. I combine this analytical foundation with agile, human-centered innovation methodologies to deliver solutions that are both creative and executable. It's the fusion of a well-made blueprint with a well-told story.",
+                    testimonial_p1: '"The Discovery process opened our eyes. We went from having a passionate idea to the certainty that we were solving a real problem. The value of that clarity is immeasurable."',
+                    testimonial_author: "— Project Director, Local NGO",
+                    who_title: "This consultancy is ideal for organizations looking to:",
+                    who1: "Maximize the real and sustainable impact of their social investment.",
+                    who2: "Design programs and services that people love, use, and adopt.",
+                    who3: "Present a solid, evidence-based justification for new projects to their donors or boards.",
+                    who4: "Innovate and differentiate themselves, becoming an impact leader in their sector.",
+                    cta_title: "Ready to build on a solid foundation?",
+                    cta_p1: "The success of your next big project shouldn't be a matter of luck. It's a matter of design. Invest in understanding first and reap the rewards of lasting impact. Let's take the first step together.",
+                    cta_button: "Schedule Free Exploration Call",
+                    cta_p2: "A 20-minute, no-commitment call to diagnose your challenge.",
+                    footer_rights: "All rights reserved."
+                },
+                es: { // Textos por defecto en el HTML
+                    nav_home: "Inicio",
+                    nav_about: "Sobre Iteraban",
+                    nav_services: "Servicios",
+                    nav_courses: "Cursos",
+                    nav_contact: "Contacto",
+                    hero_title: "Diseña el Impacto del Mañana, Hoy.",
+                    hero_subtitle: "Ayudamos a organizaciones visionarias en Honduras a transformar sus buenas intenciones en proyectos sociales de éxito rotundo. Deja de suponer, empieza a saber.",
+                    hero_cta: "Agendar Llamada de Exploración Gratuita",
+                    problem_title: "¿Te suena familiar este desafío?",
+                    problem_p1: "Inviertes tiempo, fondos y una enorme pasión en un nuevo proyecto social. El plan parece perfecto, el equipo está motivado, pero al lanzarlo, los resultados no son los esperados. La comunidad no lo adopta como imaginabas y te quedas con la difícil pregunta: \"¿En qué fallamos?\". Este ciclo de incertidumbre no solo agota los recursos, sino también la moral.",
+                    solution_title: "La Solución: Entender Primero, Construir Después.",
+                    solution_p1: "Nadie construiría un edificio sin antes tener los planos detallados. Nuestra Fase de Descubrimiento es precisamente eso: el plano maestro de tu impacto. Antes de invertir en la \"construcción\" de tu programa, nos sumergimos en la realidad de tu comunidad para darte la certeza de que estás construyendo la solución correcta, sobre una base sólida de evidencia.",
+                    benefits_title: "¿Qué obtienes con una Fase de Descubrimiento?",
+                    benefits_subtitle: "Herramientas estratégicas que transforman tu visión en un plan accionable.",
+                    benefit1_title: "Claridad Absoluta y Mitigación de Riesgo",
+                    benefit1_desc: "Reemplaza las suposiciones con certezas, asegurando que cada lempira invertido se dirija a un impacto medible y eliminando el riesgo de proyectos fallidos.",
+                    benefit2_title: "Innovación Basada en Evidencia",
+                    benefit2_desc: "Descubre oportunidades que otros no ven. Te entregamos Arquetipos de Usuario y Mapas de Viaje que revelan áreas de innovación únicas y efectivas.",
+                    benefit3_title: "Alineación y Confianza para Stakeholders",
+                    benefit3_desc: "Obtén la aprobación de tu directorio o donantes con entregables visuales y basados en datos que cuentan una historia humana y convincente que justifica la inversión.",
+                    process_title: "Nuestro Proceso Probado hacia la Claridad",
+                    process1_title: "Preparación y Alineación",
+                    process1_desc: "Iniciamos con una inmersión profunda en TUS objetivos. Alineamos tu visión con un plan de investigación claro y enfocado para responder a tus preguntas más críticas.",
+                    process2_title: "Investigación Inmersiva",
+                    process2_desc: "Salimos al terreno para hablar, escuchar y observar a la comunidad en su contexto real, capturando historias y verdades que no aparecen en las estadísticas.",
+                    process3_title: "Síntesis y Revelación de Insights",
+                    process3_desc: "Convertimos los datos crudos en patrones y \"insights\" — esas verdades no obvias que te darán una ventaja estratégica.",
+                    process4_title: "Entrega de Hoja de Ruta Estratégica",
+                    process4_desc: "Te entregamos una hoja de ruta visual y accionable, con oportunidades priorizadas para que sepas exactamente qué hacer a continuación.",
+                    credibility_title: "Rigor Analítico, Corazón Humano.",
+                    credibility_p1: "Mi enfoque es único. Como Ingeniero Civil con un Máster en Administración de Proyectos, aporto una disciplina de pensamiento estructurado, gestión de riesgos y planificación rigurosa a cada desafío. Combino esta base analítica con metodologías de innovación ágiles y centradas en el ser humano para ofrecer soluciones que son tanto creativas como ejecutables. Es la fusión de un plano bien hecho con una historia bien contada.",
+                    testimonial_p1: '"El proceso de Descubrimiento nos abrió los ojos. Pasamos de tener una idea que nos apasionaba a tener la certeza de que estábamos resolviendo un problema real. El valor de esa claridad es incalculable."',
+                    testimonial_author: "— Directora de Proyectos, ONG Local",
+                    who_title: "Esta consultoría es ideal para organizaciones que buscan:",
+                    who1: "Maximizar el impacto real y sostenible de su inversión social.",
+                    who2: "Diseñar programas y servicios que la gente ame, use y adopte.",
+                    who3: "Presentar a sus donantes o directorios una justificación sólida y basada en evidencia.",
+                    who4: "Innovar y diferenciarse, convirtiéndose en un referente de impacto en su sector.",
+                    cta_title: "¿Listo/a para construir sobre una base sólida?",
+                    cta_p1: "El éxito de tu próximo gran proyecto no debería ser una cuestión de suerte. Es una cuestión de diseño. Invierte en entendimiento primero y cosecha los frutos de un impacto duradero. Demos el primer paso juntos.",
+                    cta_button: "Agendar Llamada de Exploración Gratuita",
+                    cta_p2: "Una llamada de 20 minutos, sin compromiso, para diagnosticar tu desafío.",
+                    footer_rights: "Todos los derechos reservados."
+                }
+            };
+            
+            const langSwitcher = document.getElementById('lang-switcher');
+            
+            function switchLanguage(lang) {
+                document.querySelectorAll('[data-lang-key]').forEach(el => {
+                    const key = el.getAttribute('data-lang-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+                localStorage.setItem('language', lang); // Guarda la preferencia del usuario
+            }
+            
+            langSwitcher.addEventListener('change', (e) => switchLanguage(e.target.value));
+
+            // Carga el idioma guardado o usa 'es' por defecto
+            const savedLang = localStorage.getItem('language') || 'es';
+            langSwitcher.value = savedLang;
+            switchLanguage(savedLang);
+
+            // --- FUNCIONES GENERALES DE LA PÁGINA ---
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.section-fade-in').forEach(section => observer.observe(section));
+
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

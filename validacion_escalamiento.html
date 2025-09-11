@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Validación y Escalamiento | Iteraban</title>
+    <meta name="description" content="Lleva tu solución del prototipo al impacto real. Te ayudamos a probar, medir y escalar tus proyectos sociales para asegurar su sostenibilidad y éxito a largo plazo.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Validación y Escalamiento | Iteraban">
+    <meta property="og:description" content="Convierte un prototipo validado en un programa sostenible y de alto impacto.">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a1a1a/ffffff?text=Escalamiento">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tu-dominio.com/validacion_escalamiento.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/FF6A00/ffffff?text=I">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN for high-quality icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
+        .accent-color { color: #FF6A00; }
+        .bg-accent-color { background-color: #FF6A00; }
+        .section-fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .section-fade-in.visible { opacity: 1; transform: translateY(0); }
+        .header-scrolled { background-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HEADER CORREGIDO Y SIMPLIFICADO -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="iteraban_website.html#inicio" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/FF6A00/ffffff?text=I" alt="Logo de Iteraban" class="h-8 w-8 rounded-full">
+                <span class="text-xl font-bold text-gray-800">Iteraban</span>
+            </a>
+            
+            <!-- Menú de Navegación Simplificado para Subpáginas -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="iteraban_website.html#inicio" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_home">Inicio</a>
+                <a href="iteraban_website.html#sobre" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_about">Sobre Iteraban</a>
+                <a href="iteraban_website.html#servicios" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_services">Servicios</a>
+                <a href="iteraban_website.html#cursos" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_courses">Cursos</a>
+                <a href="iteraban_website.html#contacto" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_contact">Contacto</a>
+            </nav>
+
+            <!-- Selector de Idioma -->
+            <div>
+                <select id="lang-switcher" class="bg-transparent text-sm text-gray-500 font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6A00]">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. ENCABEZADO (HERO SECTION) -->
+        <section class="bg-gray-50 pt-32 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight mb-4" data-lang-key="hero_title">Del Prototipo al Impacto Real.</h1>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-8" data-lang-key="hero_subtitle">Validamos tu solución a través de un piloto medido y diseñamos una estrategia robusta para escalar tu proyecto, asegurando un impacto social sostenible y a largo plazo.</p>
+                <a href="iteraban_website.html#contacto" class="inline-block bg-[#FF6A00] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transform hover:scale-105 transition-all duration-300 shadow-lg" data-lang-key="hero_cta">
+                    Agendar Llamada de Estrategia
+                </a>
+            </div>
+        </section>
+        
+        <!-- 2. SECCIÓN DE PROBLEMA -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4" data-lang-key="problem_title">El desafío final: Crecer sin fracasar.</h2>
+                    <p class="text-gray-600" data-lang-key="problem_p1">Tienes un prototipo que los usuarios aman. Es una gran victoria, pero el viaje no ha terminado. Ahora te enfrentas a la incertidumbre del mundo real: ¿Funcionará la logística? ¿Será financieramente sostenible? ¿Cómo puedes crecer de 10 a 10,000 beneficiarios sin que la calidad se desplome? Un lanzamiento sin una estrategia de validación y escalamiento es una apuesta arriesgada.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?q=80&w=2071&auto=format=fit=crop" alt="Persona analizando un plan de crecimiento" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN DE SOLUCIÓN -->
+        <section class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl font-bold mb-4" data-lang-key="solution_title">La Solución: Probar, Medir y Escalar con Estrategia.</h2>
+                <p class="text-lg text-gray-300" data-lang-key="solution_p1">Nuestro servicio de Validación y Escalamiento es el puente entre tu prototipo prometedor y un programa de impacto sostenible. A través de un proyecto piloto controlado, probamos tu solución en un entorno real para medir su efectividad, ajustar la operativa y validar el modelo de sostenibilidad. Con esos aprendizajes, co-diseñamos una hoja de ruta detallada para escalar de forma inteligente y segura.</p>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN DE BENEFICIOS / ENTREGABLES -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="benefits_title">¿Qué obtienes en esta fase?</h2>
+                    <p class="text-lg text-gray-500 mt-2" data-lang-key="benefits_subtitle">Certeza para crecer y las herramientas para hacerlo bien.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="benefit1_title">Piloto Medido y Optimizado</h3>
+                        <p class="text-gray-600" data-lang-key="benefit1_desc">Obtienes los resultados de un piloto en el mundo real, con datos cuantitativos y cualitativos que demuestran el impacto y nos permiten optimizar el modelo operativo antes del lanzamiento completo.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="benefit2_title">Estrategia de Escalamiento Sostenible</h3>
+                        <p class="text-gray-600" data-lang-key="benefit2_desc">Recibes una hoja de ruta detallada para el crecimiento, incluyendo un modelo financiero, plan de operaciones, y estrategias de comunicación para llevar tu solución a una audiencia más amplia.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="benefit3_title">Caso de Inversión para Stakeholders</h3>
+                        <p class="text-gray-600" data-lang-key="benefit3_desc">Empaquetamos los resultados del piloto en un caso de negocio convincente, dándote una herramienta poderosa para presentar a donantes, directivos e inversionistas para asegurar los fondos necesarios para escalar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECCIÓN DEL PROCESO -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="process_title">Nuestro Proceso hacia la Sostenibilidad</h2>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">1</div><div><h3 class="text-xl font-bold" data-lang-key="process1_title">Planificación del Piloto</h3><p class="text-gray-600" data-lang-key="process1_desc">Definimos juntos los indicadores clave de éxito (KPIs), seleccionamos el grupo de participantes y diseñamos la logística y el plan de medición del piloto.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">2</div><div><h3 class="text-xl font-bold" data-lang-key="process2_title">Implementación y Monitoreo</h3><p class="text-gray-600" data-lang-key="process2_desc">Lanzamos el piloto en un entorno controlado, recopilando datos y feedback constante para entender el desempeño de la solución en el mundo real.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">3</div><div><h3 class="text-xl font-bold" data-lang-key="process3_title">Análisis y Refinamiento</h3><p class="text-gray-600" data-lang-key="process3_desc">Analizamos los resultados del piloto para identificar qué funcionó, qué no, y qué se puede mejorar. Refinamos tanto la solución como el modelo operativo.</p></div></div>
+                    <div class="flex items-start space-x-4"><div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF6A00] text-white flex items-center justify-center text-xl font-bold">4</div><div><h3 class="text-xl font-bold" data-lang-key="process4_title">Diseño de la Estrategia de Escalamiento</h3><p class="text-gray-600" data-lang-key="process4_desc">Con los aprendizajes del piloto, construimos un plan estratégico detallado para el lanzamiento y crecimiento de tu proyecto a nivel regional o nacional.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SECCIÓN DE CREDIBILIDAD -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-lang-key="credibility_title">Rigor Analítico, Corazón Humano.</h2>
+                 <p class="text-gray-600 mb-8" data-lang-key="credibility_p1">Mi enfoque es único. Como Ingeniero Civil con un Máster en Administración de Proyectos, aporto una disciplina de pensamiento estructurado, gestión de riesgos y planificación rigurosa a cada desafío. Combino esta base analítica con metodologías de innovación ágiles y centradas en el ser humano para ofrecer soluciones que son tanto creativas como ejecutables. Es la fusión de un plano bien hecho con una historia bien contada.</p>
+                 <div class="bg-gray-100 p-8 rounded-lg italic border-l-4 border-[#FF6A00]">
+                    <p class="text-gray-700" data-lang-key="testimonial_p1">"El piloto fue fundamental. Nos permitió corregir errores clave a bajo costo y nos dio la confianza y los datos para presentar un plan de expansión que nuestro directorio aprobó por unanimidad."</p>
+                    <p class="mt-4 font-semibold text-gray-800" data-lang-key="testimonial_author">— Director Ejecutivo, Fundación Social</p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- 7. SECCIÓN "PARA QUIÉN ES ESTO" -->
+        <section class="py-20 bg-gray-50">
+             <div class="container mx-auto px-6 max-w-2xl">
+                <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="who_title">Ideal para organizaciones que:</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who1">Tienen un prototipo o concepto validado y necesitan probarlo en el mundo real.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who2">Buscan asegurar la sostenibilidad operativa y financiera antes de un lanzamiento a gran escala.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who3">Necesitan datos duros y un caso de negocio sólido para justificar una mayor inversión.</span></li>
+                    <li class="flex items-start"><svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span data-lang-key="who4">Están listas para pasar de un proyecto local a una solución de impacto regional o nacional.</span></li>
+                </ul>
+             </div>
+        </section>
+
+        <!-- 8. LLAMADA A LA ACCIÓN FINAL -->
+        <section class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-key="cta_title">¿Listo/a para escalar tu impacto?</h2>
+                <p class="text-lg text-gray-300 mb-8" data-lang-key="cta_p1">Una gran idea merece una gran estrategia de crecimiento. Permítenos ayudarte a construir el camino para que tu solución llegue a todas las personas que la necesitan, de forma sostenible y duradera.</p>
+                <a href="iteraban_website.html#contacto" class="inline-block bg-[#FF6A00] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transform hover:scale-105 transition-all duration-300 shadow-lg" data-lang-key="cta_button">
+                    Agendar Llamada de Estrategia
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER (Consistente) -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; <span id="copyright-year"></span> Iteraban. <span data-lang-key="footer_rights">Todos los derechos reservados.</span></p>
+             <div class="flex space-x-6">
+                <!-- Social Icons Updated with Font Awesome -->
+                <a href="https://www.instagram.com/iteraban/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.tiktok.com/@iteraban2?lang=en" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/iteraban-hn-713673382/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- GESTIÓN MULTI-IDIOMA ---
+            const translations = {
+                en: {
+                    nav_home: "Home",
+                    nav_about: "About",
+                    nav_services: "Services",
+                    nav_courses: "Courses",
+                    nav_contact: "Contact",
+                    hero_title: "From Prototype to Real Impact.",
+                    hero_subtitle: "We validate your solution through a measured pilot and design a robust strategy to scale your project, ensuring sustainable and long-term social impact.",
+                    hero_cta: "Schedule Strategy Call",
+                    problem_title: "The final challenge: Growing without failing.",
+                    problem_p1: "You have a prototype that users love. It's a great victory, but the journey isn't over. Now you face real-world uncertainty: Will the logistics work? Will it be financially sustainable? How can you grow from 10 to 10,000 beneficiaries without a drop in quality? A launch without a validation and scaling strategy is a risky bet.",
+                    solution_title: "The Solution: Test, Measure, and Scale with Strategy.",
+                    solution_p1: "Our Validation and Scaling service is the bridge between your promising prototype and a sustainable impact program. Through a controlled pilot project, we test your solution in a real environment to measure its effectiveness, adjust operations, and validate the sustainability model. With these learnings, we co-design a detailed roadmap to scale intelligently and safely.",
+                    benefits_title: "What do you get in this phase?",
+                    benefits_subtitle: "Certainty to grow and the tools to do it right.",
+                    benefit1_title: "Measured and Optimized Pilot",
+                    benefit1_desc: "You get the results of a real-world pilot, with quantitative and qualitative data that demonstrate impact and allow us to optimize the operating model before the full launch.",
+                    benefit2_title: "Sustainable Scaling Strategy",
+                    benefit2_desc: "You receive a detailed roadmap for growth, including a financial model, operations plan, and communication strategies to bring your solution to a wider audience.",
+                    benefit3_title: "Investment Case for Stakeholders",
+                    benefit3_desc: "We package the pilot results into a compelling business case, giving you a powerful tool to present to donors, directors, and investors to secure the necessary funds to scale.",
+                    process_title: "Our Process Towards Sustainability",
+                    process1_title: "Pilot Planning",
+                    process1_desc: "Together, we define the key performance indicators (KPIs), select the participant group, and design the logistics and measurement plan for the pilot.",
+                    process2_title: "Implementation and Monitoring",
+                    process2_desc: "We launch the pilot in a controlled environment, collecting constant data and feedback to understand the solution's performance in the real world.",
+                    process3_title: "Analysis and Refinement",
+                    process3_desc: "We analyze the pilot results to identify what worked, what didn't, and what can be improved. We refine both the solution and the operational model.",
+                    process4_title: "Scaling Strategy Design",
+                    process4_desc: "With the learnings from the pilot, we build a detailed strategic plan for the launch and growth of your project at a regional or national level.",
+                    credibility_title: "Analytical Rigor, Human Heart.",
+                    credibility_p1: "My approach is unique. As a Civil Engineer with a Master's in Project Management, I bring structured thinking, risk management, and rigorous planning to every challenge. I combine this analytical foundation with agile, human-centered innovation methodologies to deliver solutions that are both creative and executable. It's the fusion of a well-made blueprint with a well-told story.",
+                    testimonial_p1: '"The pilot was fundamental. It allowed us to correct key mistakes at a low cost and gave us the confidence and data to present an expansion plan that our board unanimously approved."',
+                    testimonial_author: "— Executive Director, Social Foundation",
+                    who_title: "Ideal for organizations that:",
+                    who1: "Have a validated prototype or concept and need to test it in the real world.",
+                    who2: "Seek to ensure operational and financial sustainability before a large-scale launch.",
+                    who3: "Need hard data and a solid business case to justify further investment.",
+                    who4: "Are ready to move from a local project to a solution with regional or national impact.",
+                    cta_title: "Ready to scale your impact?",
+                    cta_p1: "A great idea deserves a great growth strategy. Let us help you build the path for your solution to reach everyone who needs it, sustainably and lastingly.",
+                    cta_button: "Schedule Strategy Call",
+                    footer_rights: "All rights reserved."
+                },
+                es: {
+                    nav_home: "Inicio",
+                    nav_about: "Sobre Iteraban",
+                    nav_services: "Servicios",
+                    nav_courses: "Cursos",
+                    nav_contact: "Contacto",
+                    hero_title: "Del Prototipo al Impacto Real.",
+                    hero_subtitle: "Validamos tu solución a través de un piloto medido y diseñamos una estrategia robusta para escalar tu proyecto, asegurando un impacto social sostenible y a largo plazo.",
+                    hero_cta: "Agendar Llamada de Estrategia",
+                    problem_title: "El desafío final: Crecer sin fracasar.",
+                    problem_p1: "Tienes un prototipo que los usuarios aman. Es una gran victoria, pero el viaje no ha terminado. Ahora te enfrentas a la incertidumbre del mundo real: ¿Funcionará la logística? ¿Será financieramente sostenible? ¿Cómo puedes crecer de 10 a 10,000 beneficiarios sin que la calidad se desplome? Un lanzamiento sin una estrategia de validación y escalamiento es una apuesta arriesgada.",
+                    solution_title: "La Solución: Probar, Medir y Escalar con Estrategia.",
+                    solution_p1: "Nuestro servicio de Validación y Escalamiento es el puente entre tu prototipo prometedor y un programa de impacto sostenible. A través de un proyecto piloto controlado, probamos tu solución en un entorno real para medir su efectividad, ajustar la operativa y validar el modelo de sostenibilidad. Con esos aprendizajes, co-diseñamos una hoja de ruta detallada para escalar de forma inteligente y segura.",
+                    benefits_title: "¿Qué obtienes en esta fase?",
+                    benefits_subtitle: "Certeza para crecer y las herramientas para hacerlo bien.",
+                    benefit1_title: "Piloto Medido y Optimizado",
+                    benefit1_desc: "Obtienes los resultsados de un piloto en el mundo real, con datos cuantitativos y cualitativos que demuestran el impacto y nos permiten optimizar el modelo operativo antes del lanzamiento completo.",
+                    benefit2_title: "Estrategia de Escalamiento Sostenible",
+                    benefit2_desc: "Recibes una hoja de ruta detallada para el crecimiento, incluyendo un modelo financiero, plan de operaciones, y estrategias de comunicación para llevar tu solución a una audiencia más amplia.",
+                    benefit3_title: "Caso de Inversión para Stakeholders",
+                    benefit3_desc: "Empaquetamos los resultados del piloto en un caso de negocio convincente, dándote una herramienta poderosa para presentar a donantes, directivos e inversionistas para asegurar los fondos necesarios para escalar.",
+                    process_title: "Nuestro Proceso hacia la Sostenibilidad",
+                    process1_title: "Planificación del Piloto",
+                    process1_desc: "Definimos juntos los indicadores clave de éxito (KPIs), seleccionamos el grupo de participantes y diseñamos la logística y el plan de medición del piloto.",
+                    process2_title: "Implementación y Monitoreo",
+                    process2_desc: "Lanzamos el piloto en un entorno controlado, recopilando datos y feedback constante para entender el desempeño de la solución en el mundo real.",
+                    process3_title: "Análisis y Refinamiento",
+                    process3_desc: "Analizamos los resultados del piloto para identificar qué funcionó, qué no, y qué se puede mejorar. Refinamos tanto la solución como el modelo operativo.",
+                    process4_title: "Diseño de la Estrategia de Escalamiento",
+                    process4_desc: "Con los aprendizajes del piloto, construimos un plan estratégico detallado para el lanzamiento y crecimiento de tu proyecto a nivel regional o nacional.",
+                    credibility_title: "Rigor Analítico, Corazón Humano.",
+                    credibility_p1: "Mi enfoque es único. Como Ingeniero Civil con un Máster en Administración de Proyectos, aporto una disciplina de pensamiento estructurado, gestión de riesgos y planificación rigurosa a cada desafío. Combino esta base analítica con metodologías de innovación ágiles y centradas en el ser humano para ofrecer soluciones que son tanto creativas como ejecutables. Es la fusión de un plano bien hecho con una historia bien contada.",
+                    testimonial_p1: '"El piloto fue fundamental. Nos permitió corregir errores clave a bajo costo y nos dio la confianza y los datos para presentar un plan de expansión que nuestro directorio aprobó por unanimidad."',
+                    testimonial_author: "— Director Ejecutivo, Fundación Social",
+                    who_title: "Ideal para organizaciones que:",
+                    who1: "Tienen un prototipo o concepto validado y necesitan probarlo en el mundo real.",
+                    who2: "Buscan asegurar la sostenibilidad operativa y financiera antes de un lanzamiento a gran escala.",
+                    who3: "Necesitan datos duros y un caso de negocio sólido para justificar una mayor inversión.",
+                    who4: "Están listas para pasar de un proyecto local a una solución de impacto regional o nacional.",
+                    cta_title: "¿Listo/a para escalar tu impacto?",
+                    cta_p1: "Una gran idea merece una gran estrategia de crecimiento. Permítenos ayudarte a construir el camino para que tu solución llegue a todas las personas que la necesitan, de forma sostenible y duradera.",
+                    cta_button: "Agendar Llamada de Estrategia",
+                    footer_rights: "Todos los derechos reservados."
+                }
+            };
+            
+            const langSwitcher = document.getElementById('lang-switcher');
+            
+            function switchLanguage(lang) {
+                document.querySelectorAll('[data-lang-key]').forEach(el => {
+                    const key = el.getAttribute('data-lang-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+                localStorage.setItem('language', lang);
+            }
+            
+            langSwitcher.addEventListener('change', (e) => switchLanguage(e.target.value));
+
+            const savedLang = localStorage.getItem('language') || 'es';
+            langSwitcher.value = savedLang;
+            switchLanguage(savedLang);
+
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.section-fade-in').forEach(section => observer.observe(section));
+
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

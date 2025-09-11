@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Iteraban | Diseñamos soluciones a problemas sociales</title>
+    <meta name="description" content="Ayudamos a organizaciones a diseñar y escalar soluciones a problemas sociales usando metodologías modernas centradas en las personas.">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Iteraban | Soluciones a Problemas Sociales">
+    <meta property="og:description" content="Colectivo de innovadores, diseñadores y estrategas comprometidos con la creación de un impacto positivo y sostenible en Honduras y la región.">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a1a1a/ffffff?text=Iteraban">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tu-dominio.com/iteraban_website.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/FF6A00/ffffff?text=I">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN for high-quality icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Define la fuente principal y los colores base */
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; color: #1a1a1a; }
+        .accent-color { color: #FF6A00; }
+        .bg-accent-color { background-color: #FF6A00; }
+        
+        /* Animación de entrada para las secciones */
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Efecto del header al hacer scroll */
+        .header-scrolled {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- =================================================== -->
+    <!-- HEADER -->
+    <!-- =================================================== -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#inicio" class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/FF6A00/ffffff?text=I" alt="Logo de Iteraban" class="h-8 w-8 rounded-full">
+                <span class="text-xl font-bold text-gray-800">Iteraban</span>
+            </a>
+            
+            <!-- Menú de Navegación (Desktop) -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#inicio" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_home">Inicio</a>
+                <a href="#sobre" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_about">Sobre Iteraban</a>
+                <a href="#metodologia" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_method">Metodología</a>
+                <a href="#servicios" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_services">Servicios</a>
+                <a href="#cursos" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_courses">Cursos</a>
+                <a href="#proyectos" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_projects">Proyectos</a>
+                <a href="#blog" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_blog">Blog</a>
+                <a href="#comunidad" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_community">Comunidad</a>
+                <a href="#contacto" class="text-gray-600 hover:text-[#FF6A00] transition-colors" data-lang-key="nav_contact">Contacto</a>
+            </nav>
+
+            <!-- Selector de Idioma -->
+            <div>
+                <select id="lang-switcher" class="bg-transparent text-sm text-gray-500 font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF6A00]">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =================================================== -->
+        <!-- SECCIÓN DE INICIO (HERO) -->
+        <!-- =================================================== -->
+        <section id="inicio" class="min-h-screen flex items-center bg-white pt-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight mb-4" data-lang-key="hero_title">
+                    Diseñamos soluciones a problemas sociales usando metodologías modernas centradas en las personas.
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-8" data-lang-key="hero_subtitle">
+                    Somos un colectivo de innovadores, diseñadores y estrategas comprometidos con la creación de un impacto positivo y sostenible.
+                </p>
+                <a href="https://discord.gg/gY5wRPR9Y9" target="_blank" class="inline-block bg-[#FF6A00] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transform hover:scale-105 transition-all duration-300 shadow-lg" data-lang-key="hero_cta">
+                    Conéctate a nuestra comunidad
+                </a>
+            </div>
+        </section>
+
+        <!-- =================================================== -->
+        <!-- SECCIÓN SOBRE ITERABAN -->
+        <!-- =================================================== -->
+        <section id="sobre" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 max-w-4xl text-center section-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6" data-lang-key="about_title">Iteraban es un movimiento.</h2>
+                <p class="text-lg text-gray-600 mb-4" data-lang-key="about_p1">
+                    Creemos que los problemas sociales más complejos no se resuelven con soluciones impuestas, sino co-creadas. Nuestra filosofía se basa en el Diseño Centrado en las Personas (Human-Centered Design): una disciplina que pone la empatía y la comprensión profunda de las comunidades en el centro de todo lo que hacemos.
+                </p>
+                <p class="text-lg text-gray-600" data-lang-key="about_p2">
+                    No empezamos con una idea; empezamos con las personas. Escuchamos sus historias, entendemos sus contextos y validamos sus necesidades reales antes de diseñar cualquier cosa. Así aseguramos que las soluciones no solo sean innovadoras, sino también adoptadas, amadas y sostenibles.
+                </p>
+            </div>
+        </section>
+        
+        <!-- =================================================== -->
+        <!-- SECCIÓN DE METODOLOGÍA -->
+        <!-- =================================================== -->
+        <section id="metodologia" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="method_title">Nuestra Metodología</h2>
+                    <p class="text-lg text-gray-500 mt-2" data-lang-key="method_subtitle">Un proceso probado para generar impacto real.</p>
+                </div>
+                <div class="relative max-w-5xl mx-auto">
+                    <!-- Línea de conexión (solo en desktop) -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2"></div>
+                    <div class="grid md:grid-cols-5 gap-8 relative">
+                        <!-- Step 1 -->
+                        <div class="text-center section-fade-in">
+                            <div class="relative mb-4">
+                                <div class="w-16 h-16 mx-auto bg-[#FF6A00] text-white text-2xl font-bold rounded-full flex items-center justify-center">1</div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2" data-lang-key="method_step1_title">Descubrir</h3>
+                            <p class="text-gray-600" data-lang-key="method_step1_desc">Nos sumergimos en el contexto del problema social para entenderlo a fondo.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="text-center section-fade-in" style="transition-delay: 100ms;">
+                            <div class="relative mb-4">
+                                <div class="w-16 h-16 mx-auto bg-[#FF6A00] text-white text-2xl font-bold rounded-full flex items-center justify-center">2</div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2" data-lang-key="method_step2_title">Conectar</h3>
+                            <p class="text-gray-600" data-lang-key="method_step2_desc">Hablamos y observamos a las personas para generar empatía y capturar insights.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="text-center section-fade-in" style="transition-delay: 200ms;">
+                            <div class="relative mb-4">
+                                <div class="w-16 h-16 mx-auto bg-[#FF6A00] text-white text-2xl font-bold rounded-full flex items-center justify-center">3</div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2" data-lang-key="method_step3_title">Diseñar</h3>
+                            <p class="text-gray-600" data-lang-key="method_step3_desc">Co-creamos soluciones innovadoras basadas en las necesidades reales detectadas.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="text-center section-fade-in" style="transition-delay: 300ms;">
+                            <div class="relative mb-4">
+                                <div class="w-16 h-16 mx-auto bg-[#FF6A00] text-white text-2xl font-bold rounded-full flex items-center justify-center">4</div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2" data-lang-key="method_step4_title">Validar</h3>
+                            <p class="text-gray-600" data-lang-key="method_step4_desc">Creamos prototipos de bajo costo para probar y refinar las soluciones con usuarios reales.</p>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="text-center section-fade-in" style="transition-delay: 400ms;">
+                            <div class="relative mb-4">
+                                <div class="w-16 h-16 mx-auto bg-[#FF6A00] text-white text-2xl font-bold rounded-full flex items-center justify-center">5</div>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2" data-lang-key="method_step5_title">Escalar</h3>
+                            <p class="text-gray-600" data-lang-key="method_step5_desc">Diseñamos estrategias para que los proyectos crezcan y sean sostenibles a largo plazo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================== -->
+        <!-- SECCIÓN DE SERVICIOS -->
+        <!-- =================================================== -->
+        <section id="servicios" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="services_title">Servicios de Consultoría</h2>
+                    <p class="text-lg text-gray-500 mt-2" data-lang-key="services_subtitle">Ayudamos a organizaciones a maximizar su impacto.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Card 1: Discovery Phase -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 section-fade-in flex flex-col" style="transition-delay: 200ms;">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="services_card1_title">Fase de Descubrimiento</h3>
+                        <p class="text-gray-600 flex-grow" data-lang-key="services_card1_desc">Investigamos a fondo los problemas sociales para darte la claridad y la evidencia que necesitas para diseñar la solución correcta, mitigando riesgos desde el inicio.</p>
+                        <a href="fase_descubrimiento.html" class="mt-6 inline-block bg-orange-100 text-[#FF6A00] font-bold py-2 px-5 rounded-lg text-center hover:bg-orange-200 transition-colors duration-300">
+                            Conocer más
+                        </a>
+                    </div>
+                    <!-- Card 2: Solution Design -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 section-fade-in flex flex-col" style="transition-delay: 300ms;">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="services_card2_title">Diseño de Soluciones</h3>
+                        <p class="text-gray-600 flex-grow" data-lang-key="services_card2_desc">Facilitamos talleres de co-creación y utilizamos sprints de diseño para desarrollar soluciones, servicios o productos centrados en las personas.</p>
+                        <a href="diseno_soluciones.html" class="mt-6 inline-block bg-orange-100 text-[#FF6A00] font-bold py-2 px-5 rounded-lg text-center hover:bg-orange-200 transition-colors duration-300">
+                            Conocer más
+                        </a>
+                    </div>
+                    <!-- Card 3: Validation & Scaling -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 section-fade-in flex flex-col" style="transition-delay: 400ms;">
+                        <h3 class="text-xl font-bold mb-3 text-[#FF6A00]" data-lang-key="services_card3_title">Validación y Escalamiento</h3>
+                        <p class="text-gray-600 flex-grow" data-lang-key="services_card3_desc">Te ayudamos a prototipar, probar y validar tus soluciones con usuarios reales para luego crear una estrategia de implementación y escalamiento.</p>
+                        <a href="validacion_escalamiento.html" class="mt-6 inline-block bg-orange-100 text-[#FF6A00] font-bold py-2 px-5 rounded-lg text-center hover:bg-orange-200 transition-colors duration-300">
+                            Conocer más
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================== -->
+        <!-- SECCIÓN DE CURSOS Y TALLERES -->
+        <!-- =================================================== -->
+        <section id="cursos" class="py-20 md:py-32 bg-white">
+            <a href="cursos_talleres.html" class="container mx-auto px-6 max-w-4xl grid md:grid-cols-2 gap-10 items-center group section-fade-in">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-lang-key="courses_title">Cursos & Talleres</h2>
+                    <p class="text-gray-600 mb-4" data-lang-key="courses_p1">
+                        Nuestros cursos son herramientas de conexión y aprendizaje. Están diseñados para sensibilizar a equipos y comunidades sobre el poder de las metodologías de innovación.
+                    </p>
+                    <p class="text-gray-600" data-lang-key="courses_p2">
+                        Aprende a aplicar Design Thinking, Service Design y otras técnicas para resolver problemas de manera creativa y efectiva. Son talleres prácticos, dinámicos y colaborativos.
+                    </p>
+                    <span class="inline-block mt-6 font-bold text-gray-800 group-hover:text-[#FF6A00] transition-colors">
+                        Ver todos los cursos &rarr;
+                    </span>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format=fit=crop" alt="Taller colaborativo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+            </a>
+        </section>
+        
+        <!-- =================================================== -->
+        <!-- SECCIÓN DE PROYECTOS -->
+        <!-- =================================================== -->
+        <section id="proyectos" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="projects_title">Proyectos de Impacto</h2>
+                    <p class="text-lg text-gray-500 mt-2" data-lang-key="projects_subtitle">Historias de cambio co-creadas con la comunidad.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden section-fade-in">
+                        <img src="https://plus.unsplash.com/premium_photo-1661411325413-98a5ff88e8e4?q=80&w=1170&auto=format=fit=crop" class="w-full h-64 object-cover" alt="Productor agrícola sonriendo con sus productos">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2" data-lang-key="project1_title">Fortalecimiento de Mercados Comunitarios</h3>
+                            <p class="text-gray-600" data-lang-key="project1_desc">A través de investigación de campo y talleres de co-creación con productores agrícolas de zonas rurales, diseñamos un modelo de servicio para conectarles directamente con consumidores en ciudades. Prototipamos y validamos una solución de bajo costo vía WhatsApp que centraliza pedidos y optimiza la logística, buscando asegurar un comercio más justo y fortalecer la economía local.</p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden section-fade-in" style="transition-delay: 200ms;">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1171&auto=format=fit=crop" class="w-full h-64 object-cover" alt="Jóvenes colaborando en un taller">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2" data-lang-key="project2_title">Diseño de Rutas de Oportunidad para Jóvenes</h3>
+                            <p class="text-gray-600" data-lang-key="project2_desc">Colaboramos con jóvenes en riesgo de migración irregular para entender sus aspiraciones y barreras. Mediante un proceso de diseño de servicios, co-creamos un programa de empleabilidad que conecta la formación técnica con las necesidades reales de empresas locales. El piloto validó un modelo de mentoría y desarrollo de habilidades blandas para aumentar la retención laboral.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================== -->
+        <!-- SECCIÓN DEL BLOG -->
+        <!-- =================================================== -->
+        <section id="blog" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="blog_title">Nuestro Blog</h2>
+                    <p class="text-lg text-gray-500 mt-2" data-lang-key="blog_subtitle">Ideas, reflexiones y herramientas sobre innovación social.</p>
+                </div>
+                <div id="blog-posts" class="grid md:grid-cols-3 gap-8">
+                    <!-- Blog posts will be inserted here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================== -->
+        <!-- SECCIÓN DE COMUNIDAD -->
+        <!-- =================================================== -->
+        <section id="comunidad" class="py-20 md:py-32 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl section-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-key="community_title">Únete a la Conversación</h2>
+                <p class="text-lg text-gray-300 mb-8" data-lang-key="community_desc">
+                    Creemos en el poder de la colaboración. Nuestra comunidad en Discord es un espacio para conectar con otros agentes de cambio, co-crear soluciones, compartir aprendizajes y acelerar juntos el impacto social.
+                </p>
+                <a href="https://discord.gg/gY5wRPR9Y9" target="_blank" class="inline-block bg-[#FF6A00] font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transform hover:scale-105 transition-all duration-300 shadow-lg" data-lang-key="community_cta">
+                    Ir a la Comunidad en Discord
+                </a>
+            </div>
+        </section>
+
+        <!-- =================================================== -->
+        <!-- SECCIÓN DE CONTACTO -->
+        <!-- =================================================== -->
+        <section id="contacto" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 max-w-xl text-center section-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800" data-lang-key="contact_title">Hablemos</h2>
+                <p class="text-lg text-gray-500 mt-2 mb-8" data-lang-key="contact_subtitle">¿Tienes un desafío de impacto social? Nos encantaría escucharte.</p>
+                
+                <form action="https://api.web3forms.com/submit" method="POST" class="text-left">
+                    <input type="hidden" name="access_key" value="a8810908-baf1-4a7c-9950-686a94280c7b">
+                    
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-bold mb-2" data-lang-key="contact_name">Nombre</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6A00]">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-bold mb-2" data-lang-key="contact_email">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6A00]">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-bold mb-2" data-lang-key="contact_message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6A00]"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="w-full bg-[#FF6A00] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-[#E65C00] transition-colors" data-lang-key="contact_submit">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- =================================================== -->
+    <!-- FOOTER -->
+    <!-- =================================================== -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-400 mb-4 md:mb-0">&copy; <span id="copyright-year"></span> Iteraban. <span data-lang-key="footer_rights">Todos los derechos reservados.</span></p>
+             <div class="flex space-x-6">
+                <!-- Social Icons Updated with Font Awesome -->
+                <a href="https://www.instagram.com/iteraban/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.tiktok.com/@iteraban2?lang=en" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/iteraban-hn-713673382/" target="_blank" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // COMENTARIO PARA EL USUARIO:
+        // Este bloque de script maneja toda la interactividad de la página.
+        // Puedes editar los textos para otros idiomas y añadir nuevas entradas de blog aquí.
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- GESTIÓN MULTI-IDIOMA ---
+            const translations = {
+                en: {
+                    nav_home: "Home",
+                    nav_about: "About Iteraban",
+                    nav_method: "Methodology",
+                    nav_services: "Services",
+                    nav_courses: "Courses",
+                    nav_projects: "Projects",
+                    nav_blog: "Blog",
+                    nav_community: "Community",
+                    nav_contact: "Contact",
+                    hero_title: "We design solutions to social problems using modern, human-centered methodologies.",
+                    hero_subtitle: "We are a collective of innovators, designers, and strategists committed to creating positive and sustainable impact.",
+                    hero_cta: "Join our community",
+                    about_title: "Iteraban is a movement.",
+                    about_p1: "We believe that the most complex social problems are not solved with imposed solutions, but co-created ones. Our philosophy is based on Human-Centered Design: a discipline that places empathy and a deep understanding of communities at the core of everything we do.",
+                    about_p2: "We don't start with an idea; we start with people. We listen to their stories, understand their contexts, and validate their real needs before designing anything. This ensures that solutions are not only innovative but also adopted, loved, and sustainable.",
+                    method_title: "Our Methodology",
+                    method_subtitle: "A proven process to generate real impact.",
+                    method_step1_title: "Discover",
+                    method_step1_desc: "We dive deep into the context of the social problem to understand it thoroughly.",
+                    method_step2_title: "Connect",
+                    method_step2_desc: "We talk to and observe people to build empathy and capture insights.",
+                    method_step3_title: "Design",
+                    method_step3_desc: "We co-create innovative solutions based on the real needs identified.",
+                    method_step4_title: "Validate",
+                    method_step4_desc: "We create low-cost prototypes to test and refine solutions with real users.",
+                    method_step5_title: "Scale",
+                    method_step5_desc: "We design strategies for projects to grow and be sustainable in the long term.",
+                    services_title: "Consulting Services",
+                    services_subtitle: "Helping organizations maximize their impact.",
+                    services_card1_title: "Discovery Phase",
+                    services_card1_desc: "We thoroughly research social problems to give you the clarity and evidence needed to design the right solution, mitigating risks from the start.",
+                    services_card2_title: "Solution Design",
+                    services_card2_desc: "We facilitate co-creation workshops and use design sprints to develop people-centered solutions, services, or products.",
+                    services_card3_title: "Validation & Scaling",
+                    services_card3_desc: "We help you prototype, test, and validate your solutions with real users, then create an implementation and scaling strategy.",
+                    courses_title: "Courses & Workshops",
+                    courses_p1: "Our courses are tools for connection and learning. They are designed to raise awareness among teams and communities about the power of innovation methodologies.",
+                    courses_p2: "Learn to apply Design Thinking, Service Design, and other techniques to solve problems creatively and effectively. They are practical, dynamic, and collaborative workshops.",
+                    projects_title: "Impact Projects",
+                    projects_subtitle: "Stories of change co-created with the community.",
+                    project1_title: "Strengthening Community Markets",
+                    project1_desc: "Through field research and co-creation workshops with rural agricultural producers, we designed a service model to connect them directly with consumers in cities. We prototyped and validated a low-cost solution via WhatsApp that centralizes orders and optimizes logistics, seeking to ensure fairer trade and strengthen the local economy.",
+                    project2_title: "Designing Opportunity Pathways for Youth",
+                    project2_desc: "We collaborated with youth at risk of irregular migration to understand their aspirations and barriers. Through a service design process, we co-created an employability program that connects technical training with the real needs of local companies. The pilot validated a mentoring and soft skills development model to increase job retention.",
+                    blog_title: "Our Blog",
+                    blog_subtitle: "Ideas, reflections, and tools on social innovation.",
+                    community_title: "Join the Conversation",
+                    community_desc: "We believe in the power of collaboration. Our Discord community is a space to connect with other change-makers, co-create solutions, share learnings, and accelerate social impact together.",
+                    community_cta: "Go to the Discord Community",
+                    contact_title: "Let's Talk",
+                    contact_subtitle: "Have a social impact challenge? We'd love to hear about it.",
+                    contact_name: "Name",
+                    contact_email: "Email",
+                    contact_message: "Message",
+                    contact_submit: "Send Message",
+                    footer_rights: "All rights reserved."
+                },
+                es: { // Default texts in HTML, but listed here for completeness
+                    nav_home: "Inicio",
+                    nav_about: "Sobre Iteraban",
+                    nav_method: "Metodología",
+                    nav_services: "Servicios",
+                    nav_courses: "Cursos",
+                    nav_projects: "Proyectos",
+                    nav_blog: "Blog",
+                    nav_community: "Comunidad",
+                    nav_contact: "Contacto",
+                    hero_title: "Diseñamos soluciones a problemas sociales usando metodologías modernas centradas en las personas.",
+                    hero_subtitle: "Somos un colectivo de innovadores, diseñadores y estrategas comprometidos con la creación de un impacto positivo y sostenible.",
+                    hero_cta: "Conéctate a nuestra comunidad",
+                    about_title: "Iteraban es un movimiento.",
+                    about_p1: "Creemos que los problemas sociales más complejos no se resuelven con soluciones impuestas, sino co-creadas. Nuestra filosofía se basa en el Diseño Centrado en las Personas (Human-Centered Design): una disciplina que pone la empatía y la comprensión profunda de las comunidades en el centro de todo lo que hacemos.",
+                    about_p2: "No empezamos con una idea; empezamos con las personas. Escuchamos sus historias, entendemos sus contextos y validamos sus necesidades reales antes de diseñar cualquier cosa. Así aseguramos que las soluciones no solo sean innovadoras, sino también adoptadas, amadas y sostenibles.",
+                    method_title: "Nuestra Metodología",
+                    method_subtitle: "Un proceso probado para generar impacto real.",
+                    method_step1_title: "Descubrir",
+                    method_step1_desc: "Nos sumergimos en el contexto del problema social para entenderlo a fondo.",
+                    method_step2_title: "Conectar",
+                    method_step2_desc: "Hablamos y observamos a las personas para generar empatía y capturar insights.",
+                    method_step3_title: "Diseñar",
+                    method_step3_desc: "Co-creamos soluciones innovadoras basadas en las necesidades reales detectadas.",
+                    method_step4_title: "Validar",
+                    method_step4_desc: "Creamos prototipos de bajo costo para probar y refinar las soluciones con usuarios reales.",
+                    method_step5_title: "Escalar",
+                    method_step5_desc: "Diseñamos estrategias para que los proyectos crezcan y sean sostenibles a largo plazo.",
+                    services_title: "Servicios de Consultoría",
+                    services_subtitle: "Ayudamos a organizaciones a maximizar su impacto.",
+                    services_card1_title: "Fase de Descubrimiento",
+                    services_card1_desc: "Investigamos a fondo los problemas sociales para darte la claridad y la evidencia que necesitas para diseñar la solución correcta, mitigando riesgos desde el inicio.",
+                    services_card2_title: "Diseño de Soluciones",
+                    services_card2_desc: "Facilitamos talleres de co-creación y utilizamos sprints de diseño para desarrollar soluciones, servicios o productos centrados en las personas.",
+                    services_card3_title: "Validación y Escalamiento",
+                    services_card3_desc: "Te ayudamos a prototipar, probar y validar tus soluciones con usuarios reales para luego crear una estrategia de implementación y escalamiento.",
+                    courses_title: "Cursos & Talleres",
+                    courses_p1: "Nuestros cursos son herramientas de conexión y aprendizaje. Están diseñados para sensibilizar a equipos y comunidades sobre el poder de las metodologías de innovación.",
+                    courses_p2: "Aprende a aplicar Design Thinking, Service Design y otras técnicas para resolver problemas de manera creativa y efectiva. Son talleres prácticos, dinámicos y colaborativos.",
+                    projects_title: "Proyectos de Impacto",
+                    projects_subtitle: "Historias de cambio co-creadas con la comunidad.",
+                    project1_title: "Fortalecimiento de Mercados Comunitarios",
+                    project1_desc: "A través de investigación de campo y talleres de co-creación con productores agrícolas de zonas rurales, diseñamos un modelo de servicio para conectarles directamente con consumidores en ciudades. Prototipamos y validamos una solución de bajo costo vía WhatsApp que centraliza pedidos y optimiza la logística, buscando asegurar un comercio más justo y fortalecer la economía local.",
+                    project2_title: "Diseño de Rutas de Oportunidad para Jóvenes",
+                    project2_desc: "Colaboramos con jóvenes en riesgo de migración irregular para entender sus aspiraciones y barreras. Mediante un proceso de diseño de servicios, co-creamos un programa de empleabilidad que conecta la formación técnica con las necesidades reales de empresas locales. El piloto validó un modelo de mentoría y desarrollo de habilidades blandas para aumentar la retención laboral.",
+                    blog_title: "Nuestro Blog",
+                    blog_subtitle: "Ideas, reflexiones y herramientas sobre innovación social.",
+                    community_title: "Únete a la Conversación",
+                    community_desc: "Creemos en el poder de la colaboración. Nuestra comunidad en Discord es un espacio para conectar con otros agentes de cambio, co-crear soluciones, compartir aprendizajes y acelerar juntos el impacto social.",
+                    community_cta: "Ir a la Comunidad en Discord",
+                    contact_title: "Hablemos",
+                    contact_subtitle: "¿Tienes un desafío de impacto social? Nos encantaría escucharte.",
+                    contact_name: "Nombre",
+                    contact_email: "Email",
+                    contact_message: "Mensaje",
+                    contact_submit: "Enviar Mensaje",
+                    footer_rights: "Todos los derechos reservados."
+                }
+            };
+            
+            const langSwitcher = document.getElementById('lang-switcher');
+            
+            function switchLanguage(lang) {
+                document.querySelectorAll('[data-lang-key]').forEach(el => {
+                    const key = el.getAttribute('data-lang-key');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+                document.documentElement.lang = lang;
+                localStorage.setItem('language', lang); // Save user preference
+            }
+            
+            langSwitcher.addEventListener('change', (e) => switchLanguage(e.target.value));
+
+            // Load saved language or default to 'es'
+            const savedLang = localStorage.getItem('language') || 'es';
+            langSwitcher.value = savedLang;
+            switchLanguage(savedLang);
+
+            // --- DYNAMIC BLOG MANAGEMENT ---
+            const blogPosts = [
+                {
+                    img: 'https://images.unsplash.com/photo-1603382109438-f2707281779c?q=80&w=736&auto=format&fit=crop',
+                    title: {
+                        es: '¿Tu idea es brillante o solo un espejismo? El poder de la claridad para crear valor real.',
+                        en: 'Is Your Idea Brilliant or Just a Mirage? The Power of Clarity to Create Real Value.'
+                    },
+                    excerpt: {
+                        es: 'Descubre cómo la iteración constante es la clave para transformar una buena idea en una solución real y validada.',
+                        en: 'Discover how constant iteration is the key to transforming a good idea into a real, validated solution.'
+                    },
+                    link: 'https://www.linkedin.com/pulse/tu-idea-es-brillante-o-solo-un-espejismo-el-poder-de-la-iteraban-hn-midte/'
+                },
+                {
+                    img: 'https://images.unsplash.com/photo-1619468410848-f18b4fe28b3e?q=80&w=736&auto=format&fit=crop',
+                    title: {
+                        es: 'El Asesino Silencioso de Startups: No es tu Producto, es tu Silencio.',
+                        en: 'The Silent Killer of Startups: It\'s Not Your Product, It\'s Your Silence.'
+                    },
+                    excerpt: {
+                        es: 'El mayor riesgo no es la competencia, sino construir algo que a nadie le importa. Aprende por qué la falta de feedback es el asesino silencioso.',
+                        en: 'The biggest risk isn\'t competition; it\'s building something nobody cares about. Learn why lack of feedback is the silent killer.'
+                    },
+                    link: 'https://www.linkedin.com/pulse/el-asesino-silencioso-de-startups-es-tu-producto-silencio-agurcia-3f0ye/'
+                },
+                {
+                    img: 'https://images.unsplash.com/photo-1580115959243-7ae35bf0937c?q=80&w=687&auto=format=fit=crop',
+                    title: {
+                        es: 'Deja de Hablar, Empieza a Probar: Cómo la Interacción Real Impulsa tu MVP',
+                        en: 'Stop Talking, Start Testing: How Real-World Interaction Drives Your MVP'
+                    },
+                    excerpt: {
+                        es: 'Tu idea no vale nada hasta que se enfrenta al mercado. Te mostramos cómo los experimentos de bajo costo validan tu concepto.',
+                        en: 'Your idea is worthless until it faces the market. We show you how low-cost experiments validate your concept.'
+                    },
+                    link: 'https://www.linkedin.com/pulse/deja-de-hablar-empieza-probar-c%C3%B3mo-la-interacci%C3%B3n-en-el-agurcia-rzywe/'
+                }
+            ];
+
+            const blogContainer = document.getElementById('blog-posts');
+            
+            function renderBlogPosts() {
+                blogContainer.innerHTML = ''; // Limpiar el contenedor
+                const currentLang = localStorage.getItem('language') || 'es';
+
+                blogPosts.forEach((post, index) => {
+                    const postEl = document.createElement('div');
+                    postEl.className = 'bg-white rounded-lg shadow-lg overflow-hidden section-fade-in';
+                    postEl.style.transitionDelay = `${index * 100}ms`;
+
+                    postEl.innerHTML = `
+                        <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="block group">
+                            <div class="overflow-hidden">
+                                <img src="${post.img}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" alt="${post.title[currentLang]}">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2 group-hover:text-[#FF6A00] transition-colors">${post.title[currentLang]}</h3>
+                                <p class="text-gray-600">${post.excerpt[currentLang]}</p>
+                            </div>
+                        </a>
+                    `;
+                    blogContainer.appendChild(postEl);
+                });
+            }
+
+            renderBlogPosts();
+            // Re-render blog posts when language changes to update titles and excerpts
+            langSwitcher.addEventListener('change', renderBlogPosts);
+            
+            // --- GENERAL PAGE FUNCTIONS ---
+            // Set the current year in the footer copyright
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            // Intersection observer for section fade-in animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            document.querySelectorAll('.section-fade-in').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
